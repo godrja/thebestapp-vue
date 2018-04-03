@@ -40,7 +40,7 @@ export default {
         },
         {
           icon: this.md() ? "md-more" : "ion-ios-bell",
-          label: "More",
+          label: "Less",
           page: MoreTab,
         }
       ]
