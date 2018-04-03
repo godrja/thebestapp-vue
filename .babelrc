@@ -1,0 +1,15 @@
+{
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 10"],
+          // We minify with uglifyjs right now so we need ES5 output. Also: Backbone breaks if we emit
+          // ES6 methods. They can't be used as constructors and forcing them to compile to plain
+          // functions (i.e. `constructor: function constructor() {}`) will make things work.
+          "uglify": true
+        },
+        "modules": false,
+        "useBuiltIns": true
+      }]
+    ]
+  }
