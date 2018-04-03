@@ -17,8 +17,11 @@ COPY . .
 
 EXPOSE 3000
 
+# npm build assumes that these directories exist
 RUN mkdir build
 RUN mkdir bundle
+
+# build the application
 RUN npm run build
 
 CMD [ "npm", "run", "serve" ]
